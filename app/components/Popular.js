@@ -19,7 +19,7 @@ function SelectLanguage(props) {
   );
 }
 
-SelectLanguage.PropTypes = {
+SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
 };
@@ -50,7 +50,7 @@ function RepoGrid(props) {
   );
 }
 
-RepoGrid.PropTypes = {
+RepoGrid.propTypes = {
   repos: PropTypes.array.isRequired,
 };
 
