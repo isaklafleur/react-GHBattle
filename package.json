@@ -1,7 +1,7 @@
 {
   "name": "react-basic-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Compare a calculated score for two user profiles on Github",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "prop-types": "^15.5.10",
+    "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
