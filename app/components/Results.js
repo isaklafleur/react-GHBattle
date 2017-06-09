@@ -25,7 +25,7 @@ function Profile(props) {
 }
 
 Profile.propTypes = {
-  info: PropTypes.object.isRequired,
+  info: PropTypes.shape().isRequired,
 };
 
 function Player(props) {

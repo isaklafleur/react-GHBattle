@@ -28,8 +28,7 @@ SelectLanguage.propTypes = {
 function RepoGrid(props) {
   return (
     <ul className="popular-list">
-      {props.repos.map((repo, index) => {
-        return (
+      {props.repos.map((repo, index) => (
         <li key={repo.name} className="popular-item">
           <div className="popular-rank">#{index + 1}</div>
           <ul className="space-list-items">
@@ -45,14 +44,13 @@ function RepoGrid(props) {
             <li>{repo.stargazers_count} stars</li>
           </ul>
         </li>
-        );
-      })}
+        ))}
     </ul>
   );
 }
 
 RepoGrid.propTypes = {
-  repos: PropTypes.array.isRequired,
+  repos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 class Popular extends React.Component {
@@ -90,7 +88,6 @@ class Popular extends React.Component {
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage}
         />
-        {/*<pre>{JSON.stringify(this.state.repos, null, 2)}</pre>*/}
         {!this.state.repos
         ? <Loading />
         : <RepoGrid repos={this.state.repos} />}
